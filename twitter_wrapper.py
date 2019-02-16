@@ -1,10 +1,15 @@
 from twitter import *
 import json
+file = open("api.txt", "r")
+with open("api.txt", "r") as ins:
+    array = []
+    for line in ins:
+        array.append(line)
 
-ACCESS_TOKEN = "967202509990322176-WoUrv9EqLk6cdkFjkXfuZhvufdA6ysb"
-ACCESS_SECRET = "65xf901IAzmi8xjOUEf2Vr8oinPBp51J25Bt4PbtFAfnE"
-CONSUMER_KEY = "CS0DjdYG1kOP5XmSP9cVudJdX"
-CONSUMER_SECRET = "DoVIxtMN4wETttNCfjiAnRyRMK9EL1CrLLtUXi5SroqjTGUAnx"
+ACCESS_TOKEN = array[0].rstrip('\n')
+ACCESS_SECRET = array[1].rstrip('\n')
+CONSUMER_KEY = array[2].rstrip('\n')
+CONSUMER_SECRET = array[3].rstrip('\n')
 
 def getUserTweets(username):
     t = Twitter(auth=OAuth(ACCESS_TOKEN, ACCESS_SECRET, CONSUMER_KEY, CONSUMER_SECRET))
