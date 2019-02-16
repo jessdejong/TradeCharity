@@ -12,31 +12,31 @@ def hello_world():
 def show_user_profile(username=None):
 	return render_template('Home.html', username=username)
 
-@app.route('/home/<username>', methods=['GET', 'POST'])
-def login(username):
-	if request.method == 'GET':
-		return ' ||| '.join(twitter_wrapper.getUserTweets(username))
-	else:
-		return hello()
+# @app.route('/home/<username>', methods=['GET', 'POST'])
+# def login(username):
+# 	if request.method == 'GET':
+# 		return ' ||| '.join(twitter_wrapper.getUserTweets(username))
+# 	else:
+# 		return hello()
 
 
-@app.route('/analysis/<username>', methods=['GET'])
-def ana(username):
-	if request.method == 'GET':
-		ret = ""
-		data = sentiment_analysis.find_negative_tweets(username)[0]
-		ret = " ".join(data) + "|||"
+# @app.route('/analysis/<username>', methods=['GET'])
+# def ana(username):
+# 	if request.method == 'GET':
+# 		ret = ""
+# 		# data = sentiment_analysis.find_negative_tweets(username)[0]
+# 		# ret = " ".join(data) + "|||"
 
-		users = twitter_wrapper.getUserFollowers(username)
-		bad_tweets = []
-		for i in users:
-			bet = sentiment_analysis.find_negative_tweets(i)[0]
-			if(len(bet) >= 1):
-				bad_tweets.append(' '.join(bet))
-		ret = ret +  ' '.join(bad_tweets)
-		return ret
-	else:
-		return hello()
+# 		# users = twitter_wrapper.getUserFollowers(username)
+# 		# bad_tweets = []
+# 		# for i in users:
+# 		# 	bet = sentiment_analysis.find_negative_tweets(i)[0]
+# 		# 	if(len(bet) >= 1):
+# 		# 		bad_tweets.append(' '.join(bet))
+# 		# ret = ret +  ' '.join(bad_tweets)
+# 		return ret
+# 	else:
+# 		return hello()
 
 '''with app.test_request_context():
 	print url_for('hello_world')
