@@ -6,7 +6,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-	news_wrapper.live_top_headlines("eh")
+	print news_wrapper.headlines()
+	print news_wrapper.descriptions()
 	return redirect('home')
 
 @app.route('/home')
