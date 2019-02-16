@@ -1,11 +1,12 @@
 from flask import Flask, url_for, request, render_template, Markup, redirect
-import twitter_wrapper
+import news_wrapper
 # import sentiment_analysis
 
 app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
+	news_wrapper.live_top_headlines("eh")
 	return redirect('home')
 
 @app.route('/home')
