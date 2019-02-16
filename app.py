@@ -1,6 +1,6 @@
 from flask import Flask, url_for, request, render_template, Markup, redirect
 import twitter_wrapper
-import sentiment_analysis
+# import sentiment_analysis
 
 app = Flask(__name__)
 

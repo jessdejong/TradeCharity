@@ -2,7 +2,7 @@
 
 # Set Up
 clone repo
-`export FLASK_APP=test.py`
+`export FLASK_APP=app.py`
 `flask run`
 
 # Contributors

@@ -105,3 +105,5 @@ venv.bak/
 
 # Stuff we don't want seen
 api.txt
+.vscode/
+__pycache__/
