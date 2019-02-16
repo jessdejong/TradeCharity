@@ -2,7 +2,8 @@
 
 # Set Up
 clone repo
-leggo
+`export FLASK_APP=test.py`
+`flask run`
 
 # Contributors
 Syed Abutalib, Jess DeJong, Syed Pervaiz
