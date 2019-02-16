@@ -9,3 +9,7 @@ clone repo
 
 # Contributors
 Syed Abutalib, Jess DeJong, Syed Pervaiz
+
+# To-do
+Need the most recent news articles
+need to find the company names, and their respective symbols

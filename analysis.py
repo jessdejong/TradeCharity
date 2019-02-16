@@ -2,6 +2,7 @@ import json
 from watson_developer_cloud import NaturalLanguageUnderstandingV1
 from watson_developer_cloud.natural_language_understanding_v1 import Features, EntitiesOptions, KeywordsOptions
 import pprint
+import news_wrapper
 
 # setup API
 natural_language_processing = NaturalLanguageUnderstandingV1(
