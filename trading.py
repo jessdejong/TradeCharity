@@ -1,14 +1,14 @@
 import pandas_datareader.data as web
 import datetime as dt    
 import news_wrapper as nw
+import analysis
 
 def backtest(start_year, start_month, start_day, money):
     """Performs a backtest from a certain date, returns article info and start and end price"""
     start = dt.datetime(start_year, start_month, start_day)
     end = dt.datetime.now()
 
-    #articles = get_article_info(start_year, start_month, start_day)
-    articles = nw.get_article_info()
+    articles = get_article_info(start_year, start_month, start_day)
 
     """
     For each article, check whether the sentiment is positive or negative.
@@ -24,7 +24,17 @@ def backtest(start_year, start_month, start_day, money):
     print(articles)
     
     for i in range(len(articles)):
+        sticker = articles[i][0]
+        stockName = articles[i][0]
+        articleName = articles[i][0]
+        articleDescription = articles[i][0]
+        articleDate = articles[i][0]
+        aName = articles[i][0]
         print(i)
+
+        # sentiment analysis
+
+        
     
     
 
@@ -34,7 +44,7 @@ def backtest(start_year, start_month, start_day, money):
     
 
 
-backtest(2018, 10, 1, 1000)
+backtest(2019, 1, 1, 1000)
 
 
 
