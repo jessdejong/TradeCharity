@@ -15,7 +15,7 @@ def home():
 
 @app.route('/home')
 def display_template(username=None):
-	return render_template('Home.html', username=username)
+	return render_template('home.html', username=username)
 
 @app.route('/backtest/<year>/<month>/<day>/<money>', methods=['GET'])
 def getBacktest(year, month, day, money):
