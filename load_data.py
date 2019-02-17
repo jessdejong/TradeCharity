@@ -2,7 +2,7 @@ import csv
 import news_wrapper
 import pandas as pd
 import pymapd
-import trading.py
+import trading
 
 user_str = 'JBE72D0140E8E4D8791A'
 password_str = 'HMRd1eirQJdWm85td82skrATdy1LFBX8duQ9CYxT'
@@ -14,7 +14,7 @@ def upload(trades):
     with open('test.csv', mode='w') as file:
         writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         arr = trades.split("\n")
-        print arr
+        print(arr)
         for i in arr:
             i = i.split("|")
             i = [i[11], i[12], i[13], i[7]]
