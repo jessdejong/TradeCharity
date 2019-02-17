@@ -8,7 +8,7 @@ def backtest(start_year, start_month, start_day, money):
     start = dt.datetime(start_year, start_month, start_day)
     end = dt.datetime.now()
 
-    articles = get_article_info(start_year, start_month, start_day)
+    articles = nw.get_article_info(start_year, start_month, start_day)
 
     """
     For each article, check whether the sentiment is positive or negative.
@@ -21,18 +21,20 @@ def backtest(start_year, start_month, start_day, money):
         update money
     """
 
-    print(articles)
+    #print(articles)
     
     for i in range(len(articles)):
-        sticker = articles[i][0]
         stockName = articles[i][0]
-        articleName = articles[i][0]
-        articleDescription = articles[i][0]
-        articleDate = articles[i][0]
-        aName = articles[i][0]
-        print(i)
+        sticker = articles[i][1]
+        articleName = articles[i][2]
+        articleDescription = articles[i][3]
+        articleURL = articles[i][4]
+        articleDate = articles[i][5]
 
         # sentiment analysis
+        sentiment = analysis.analyze(articleDescription)
+        print(articleDescription)
+        print(sentiment)
 
         
     
