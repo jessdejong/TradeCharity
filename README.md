@@ -11,6 +11,8 @@ clone repo
 
 `pip install pandas_datareader`
 
+`pip install pymapd`
+
 `export FLASK_APP=app.py`
 
 `flask run`
