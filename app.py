@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 arr = news_wrapper.get_article_info(2019, 1, 20)
 for i in arr:
-	print i
+	print(i)
 
 @app.route('/')
 def home():
@@ -20,7 +20,7 @@ def display_template(username=None):
 @app.route('/backtest/<year>/<month>/<day>/<money>', methods=['GET'])
 def getBacktest(year, month, day, money):
     if request.method == 'GET':
-        ret = trading.backtest(year, month, day money)
+        ret = trading.backtest(year, month, day, money)
         return ret
     else:
         return home()

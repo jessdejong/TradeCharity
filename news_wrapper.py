@@ -33,7 +33,7 @@ def get_article_info(year, month, day):
 
     array = []
     for i in range(len(data['articles'])):
-        print data['articles'][i]
+        print(data['articles'][i])
         for j in companies:
             j = j.rstrip('\n')
             symbol = j[j.rfind(" ")+1:len(j)]
