@@ -33,12 +33,10 @@ def get_article_info(year, month, day):
 
     array = []
     for i in range(len(data['articles'])):
-        print(data['articles'][i])
         for j in companies:
             j = j.rstrip('\n')
             symbol = j[j.rfind(" ")+1:len(j)]
             j = j[0:j.rfind(" ")]
             if j.lower() in data['articles'][i]['title'].lower() or j.lower() in data['articles'][i]['description'].lower():
-                print(data['articles'][i]['title'])
                 array.append([j, symbol, data['articles'][i]['title'], data['articles'][i]['description'], data['articles'][i]['url'], data['articles'][i]['publishedAt']])
     return array
