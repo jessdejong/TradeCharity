@@ -11,26 +11,26 @@ function init(year, month, day, money)
 			if(line==ar.length-1) break;
 			//console.log(ar[line]);
 			var ar2 = ar[line].split("|");
-			var testing = $('<div class="card"><h3>'+ar2[2]+'</h3><p>'+ar2[3]+'</p></div>');
+			var testing = $('<div class="card"><h3>'+ar2[2]+' ('+ar2[6]+')'+'</h3><p>'+ar2[3]+'</p></div>');
 			$(testing).click(function(){
 				window.open(ar2[4]);
 			});
 			$("#cardContainer").append(testing);
 			
-			var sent = parseFloat(ar2[4]);
+			var sent = parseFloat(ar2[6]);
 			var times = parseInt(ar2[8]);
 			hi += times;				
 			if (sent > 0) {
-				$("#table table").append('<tr><td>'+ar2[1]+'</td><td>'+ar2[8]+'</td><td>$'+ar2[7]+'</td><td>'+(parseInt(ar2[10])-parseInt(ar2[9]))+'</td><td>$'+(parseFloat(ar2[7])/money)+'</td><td>$'+ar2[9]+'</td></tr>');
+				$("#table table").append('<tr><td>'+ar2[1]+'</td><td>'+ar2[8]+'</td><td>$'+ar2[7]+'</td><td style="color:green">'+(parseInt(ar2[10])-parseInt(ar2[9]))+'</td><td>$'+(parseFloat(ar2[7])/money)+'</td><td>$'+ar2[9]+'</td></tr>');
 			}
 			else {
-				$("#table table").append('<tr><td>'+ar2[1]+'</td><td>'+ar2[8]+'</td><td>$'+ar2[7]+'</td><td>'+(parseInt(ar2[9])-parseInt(ar2[10]))+'</td><td>$'+(parseFloat(ar2[7])/money)+'</td><td>$'+ar2[9]+'</td></tr>');
+				$("#table table").append('<tr><td>'+ar2[1]+'</td><td>'+ar2[8]+'</td><td>$'+ar2[7]+'</td><td style="color:red">'+(parseInt(ar2[9])-parseInt(ar2[10]))+'</td><td>$'+(parseFloat(ar2[7])/money)+'</td><td>$'+ar2[9]+'</td></tr>');
 			}
 			if(line==ar.length-2)
 			{
 				$("#numberTable table tr:nth-child(2) > td:nth-child(1)").html("$"+ar2[7]);
 				$("#numberTable table tr:nth-child(2) > td:nth-child(2)").html("$"+(parseInt(ar2[7])-money));
-				$("#numberTable table tr:nth-child(2) > td:nth-child(3)").html("$"+hi);
+				$("#numberTable table tr:nth-child(2) > td:nth-child(3)").html(hi);
 			}
 
 		}
