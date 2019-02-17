@@ -21,3 +21,5 @@ Syed Abutalib, Jess DeJong, Syed Pervaiz
 # To-do
 Need the most recent news articles
 need to find the company names, and their respective symbols
+
+stockName|sticker|articleName|articleDescription|articleURL|articleDate|sentiment|money|numStocks|openVal|closeVal|year|month|day\n
