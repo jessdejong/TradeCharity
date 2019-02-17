@@ -9,6 +9,8 @@ clone repo
 
 `pip install watson_developer_cloud`
 
+`pip install pandas_datareader`
+
 `export FLASK_APP=app.py`
 
 `flask run`
