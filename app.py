@@ -4,10 +4,12 @@ import news_wrapper
 
 app = Flask(__name__)
 
+arr = news_wrapper.get_article_info()
+for i in arr:
+	print i
+
 @app.route('/')
 def hello_world():
-	print news_wrapper.headlines()
-	print news_wrapper.descriptions()
 	return redirect('home')
 
 @app.route('/home')

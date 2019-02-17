@@ -26,15 +26,15 @@ newsapi = NewsApiClient(api_key='4383f2a732424f11b00dbb7b3e3bce64')
 
 # /v2/sources
 sources = newsapi.get_sources()
-
-def headlines():
+compani_file = open("compani.txt", "r")
+companies = compani_file.readlines()
+def get_article_info():
     array = []
-    for i in data['articles']:
-        array.append(i['title'])
-    return array
-
-def descriptions():
-    array = []
-    for i in data['articles']:
-        array.append(i['description'])
+    for i in range(len(data['articles'])):
+        # print data['articles'][i]
+        for j in companies:
+            j = j.rstrip('\n')
+            if j.lower() in data['articles'][i]['title'].lower() or j.lower() in data['articles'][i]['description'].lower():
+                print(data['articles'][i]['title'])
+                array.append([j, data['articles'][i]['title'], data['articles'][i]['description'], data['articles'][i]['url']])
     return array
