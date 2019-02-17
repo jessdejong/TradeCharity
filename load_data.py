@@ -15,8 +15,12 @@ def upload(trades):
         writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         arr = trades.split("\n")
         print(arr)
+        writer.writerow(["year","month","day","money"])
         for i in arr:
+            if (len(i) < 2):
+                continue
             i = i.split("|")
+            print(i)
             i = [i[11], i[12], i[13], i[7]]
             writer.writerow(i)
 
