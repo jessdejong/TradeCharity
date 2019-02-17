@@ -5,7 +5,7 @@ import trading
 
 app = Flask(__name__)
 
-arr = news_wrapper.get_article_info()
+arr = news_wrapper.get_article_info(2019, 1, 20)
 for i in arr:
 	print i
 
