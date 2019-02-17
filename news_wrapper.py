@@ -39,4 +39,5 @@ def get_article_info(year, month, day):
             j = j[0:j.rfind(" ")]
             if j.lower() in data['articles'][i]['title'].lower() or j.lower() in data['articles'][i]['description'].lower():
                 array.append([j, symbol, data['articles'][i]['title'], data['articles'][i]['description'], data['articles'][i]['url'], data['articles'][i]['publishedAt']])
+                break
     return array
