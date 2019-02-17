@@ -1,5 +1,6 @@
 from flask import Flask, url_for, request, render_template, Markup, redirect
 import news_wrapper
+import trading
 # import sentiment_analysis
 
 app = Flask(__name__)
@@ -9,12 +10,21 @@ for i in arr:
 	print i
 
 @app.route('/')
-def hello_world():
+def home():
 	return redirect('home')
 
 @app.route('/home')
-def show_user_profile(username=None):
+def display_template(username=None):
 	return render_template('Home.html', username=username)
+
+@app.route('/backtest/<year>/<month>/<day>', methods=['GET'])
+def getBacktest(year, month, day):
+    if request.method == 'GET':
+        ret = trading.backtest(year, month, day)
+        return ret
+    else:
+        return home()
+
 
 # @app.route('/home/<username>', methods=['GET', 'POST'])
 # def login(username):
