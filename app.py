@@ -17,10 +17,10 @@ def home():
 def display_template(username=None):
 	return render_template('Home.html', username=username)
 
-@app.route('/backtest/<year>/<month>/<day>', methods=['GET'])
-def getBacktest(year, month, day):
+@app.route('/backtest/<year>/<month>/<day>/<money>', methods=['GET'])
+def getBacktest(year, month, day, money):
     if request.method == 'GET':
-        ret = trading.backtest(year, month, day)
+        ret = trading.backtest(year, month, day money)
         return ret
     else:
         return home()
