@@ -25,6 +25,7 @@ companies = compani_file.readlines()
 def get_article_info(year, month, day):
     url = ('https://newsapi.org/v2/everything?'
     'q=Apple&'
+    'pageSize=100&'
     'from={year}-{month}-{day}&'
     'sortBy=popularity&'
     'apiKey=4383f2a732424f11b00dbb7b3e3bce64')
