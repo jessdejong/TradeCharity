@@ -1,0 +1,110 @@
+3M MMM
+Abbott Laboratories ABT
+AbbVie ABBV
+ABIOMED ABMD
+Accenture ACN
+Activision ATVI
+Adobe ADBE
+AMD AMD
+Advance Auto Parts AAP
+AES Corp AES
+Affiliated Managers Group AMG
+AFLAC AFL
+Air Products & Chemicals APD
+Akamai Technologies AKAM
+Alaska Air ALK
+Albemarle Corp ALB
+Alexandria Real Estate ARE
+Alexion ALXN
+Align Technology ALGN
+Allegion ALLE
+Allergan AGN
+Alliance Data Systems ADS
+Alliant Energy Corp LNT
+Allstate ALL
+Google GOOGL
+Altria Group MO
+Amazon AMZN
+Ameren Corp AEE
+American Airlines AAL
+American Electric Power AEP
+American Express AXP
+American International Group AIG
+Anthem ANTM
+Apple AAPL
+Atmos ATO
+AT&T T
+AutoZone AZO
+AvalonBay AVB
+Bank of America BAC
+Berkshire Hathaway BRK.A
+Best Buy BBY
+Block H&R HRB
+Boeing BA
+Capital One COF
+Carmax KMX
+Carnival CCL
+Caterpillar CAT
+CBS CBS
+Cerner CERN
+Chevron CVX
+Chipotle CMG
+CIGNA CI
+Cintas CTAS
+Cisco CSCO
+Citigroup C
+Coca-Cola KO
+Comcast CMCSA
+Conoco COP
+Costco COST
+CVS CVS
+Delta Air DAL
+DowDuPont DWDP
+eBay EBAY
+Electronic Arts EA
+Equifax EFX
+Expedia EXPE
+Exxon XOM
+Facebook FB
+Fidelity FNF
+Ford F
+General Electric GE
+Goldman Sachs GS
+Hasbro HAS
+Hewlett Packard HPE
+Home Depot HD
+Intel INTC
+Intuit INTU
+Johnson & Johnson JNJ
+JPMorgan JPM
+Kellogg K
+Kohl's KSS
+Kraft KHC
+Kroger KR
+McDonald MCD
+Microsoft MSFT
+Morgan Stanley MS
+Netflix NFLX
+Nike NKE
+Oracle ORCL
+PayPal PYPL
+PepsiCo PEP
+Ralph Lauren RL
+Progressive PGR
+QUALCOMM QCOM
+Raytheon RTN
+Red Hat RHT
+Starbucks SBUX
+Target TGT
+Texas Instruments TXN
+Twitter TWTR
+Under Armour UAA
+Valero VLO
+Verizon VZ
+Visa V
+Walmart WMT
+Walgreens WBA
+Disney DIS
+Waste Management WM
+Wells Fargo WFC
+Xerox XRX
