@@ -1,7 +1,7 @@
 from flask import Flask, url_for, request, render_template, Markup, redirect
 import news_wrapper
 import trading
-import load_data
+#import load_data
 
 app = Flask(__name__)
 
@@ -21,7 +21,7 @@ def display_template(username=None):
 def getBacktest(year, month, day, money):
     if request.method == 'GET':
         ret = trading.backtest(year, month, day, money)
-        load_data.upload(ret)
+        #load_data.upload(ret)
         return ret
     else:
         return home()
