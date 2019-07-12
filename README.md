@@ -1,6 +1,8 @@
 # TradeCharity
 Our goal is to help address the homelessness issue in Dallas, by trading stocks via sentiment analysis.
 
+![Trade Charity Image](https://github.com/jessdejong/TradeCharity/blob/master/TradeCharityImage.png)
+
 # Inspiration
 As residents of Dallas, we have first hand experience with the pros and cons of our city. Our experiences walking through the streets of Dallas and Richardson have inspired us to make an application that focuses on solving homelessness.
 
